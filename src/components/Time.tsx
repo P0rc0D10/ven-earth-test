@@ -30,7 +30,7 @@ const Time = () => {
     <p>
       <FontAwesomeIcon
         className="mr-2"
-        icon={date.isBetween(beforeTime, afterTime) ? ['far', 'snooze'] : ['far', 'clock']}
+        icon={date.isBetween(beforeTime, afterTime) ? ['far', 'bed'] : ['far', 'clock']}
       />
       {date.format('Do MMMM YYYY • h:mm:ss A')}{' '}
       {currentEvent && (
