@@ -31,7 +31,8 @@ export const Dropdown = () => {
   const [active, setActive] = useState(false)
   const ref = useRef(null)
   const toggleActive = () => setActive((active) => !active)
-  useClickAway(ref, () => setActive(false))
+  const onClose = () => setActive(false)
+  useClickAway(ref, onClose)
 
   return (
     <div ref={ref}>
@@ -40,7 +41,7 @@ export const Dropdown = () => {
         aria-label="Dropdown"
         className="flex items-center justify-center focus:outline-none mr-10 transition duration-300 ease-in-out hover:text-indigo-900 dark:hover:text-indigo-200"
       >
-        <FontAwesomeIcon className="w-4 h-4" icon={[active ? 'fas' : 'far', 'caret-down']} />
+        <FontAwesomeIcon className="w-4 h-4" icon={[active ? 'far' : 'fal', 'caret-down']} />
       </button>
       <AnimatePresence>
         {active && (
@@ -49,7 +50,7 @@ export const Dropdown = () => {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
             transition={{ duration: 0.3 }}
-            onMouseLeave={() => setActive(false)}
+            onMouseLeave={onClose}
             className="text-xs absolute border border-black bg-white dark:border-white dark:bg-black py-3 pl-4 pr-12 rounded mt-4 grid gap-3"
           >
             {RouteData.filter((route) => route.type === 'dropdown').map((route) => (
