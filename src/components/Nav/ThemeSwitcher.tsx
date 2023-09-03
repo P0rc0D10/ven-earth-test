@@ -33,7 +33,7 @@ export const ThemeSwitcher = () => {
     >
       <FontAwesomeIcon
         className="h-4 w-4 text-gray-800 dark:text-gray-200"
-        icon={theme === 'light' ? ['far', 'moon'] : ['fad', 'sun']}
+        icon={theme === 'light' ? ['far', 'moon'] : ['fal', 'sun']}
       />
     </button>
   )
