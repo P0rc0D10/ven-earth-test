@@ -23,15 +23,15 @@ export const Weather = () => {
       <FontAwesomeIcon
         icon={
           ({
-            Snow: ['far', 'cloud-snow'],
-            Thunderstorm: ['far', 'thunderstorm'],
-            Rain: ['far', 'cloud-showers-heavy'],
-            Drizzle: ['far', 'cloud-rain'],
-            Mist: ['far', 'cloud-rain'],
-            Clouds: ['far', 'clouds'],
-            Clear: ['far', 'cloud-sun'],
-            Haze: ['far', 'sun-haze'],
-          }[weatherName] as IconProp) || ['far', 'cloud']
+            Snow: ['fas', 'snowflake'],
+            Thunderstorm: ['fas', 'bolt-alt'],
+            Rain: ['fas', 'cloud-rain'],
+            Drizzle: ['fas', 'cloud-showers'],
+            Mist: ['fas', 'cloud-mist'],
+            Clouds: ['fas', 'cloud'],
+            Clear: ['fas', 'sun'],
+            Haze: ['fas', 'sun-haze'],
+          }[weatherName] as IconProp) || ['fas', 'cloud']
         }
         className="mr-2"
       />
